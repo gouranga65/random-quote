@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- add css -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* add css as your own */
+    </style>
+    <!-- tag line -->
+    <div class="body">
+      <div class="tag-line">javascript quote generator</div>
+      <!-- main box -->
+      <div class="quote-box">
+        <div class="quote">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima
+          dolore molestiae soluta, quam numquam nobis?
+        </div>
+        <div class="person">gouranga mahato</div>
+        <button class="btn">new quote</button>
+      </div>
+      <!-- end of the box -->
+    </div>
+    <!-- adding java script -->
+    <script>
+      let quotes = [
+        {
+          quote: "“You are the shuckiest shuck faced shuck in the world!”",
+          person: "James Dashner, The Maze Runner",
+        },
+        {
+          quote:
+            "“I'm unpredictable, I never know where I'm going until I get there, I'm so random, I'm always growing, learning, changing, I'm never the same person twice. But one thing you can be sure of about me; is I will always do exactly what I want to do.”",
+          person: "C. JoyBell C.",
+        },
+        {
+          quote:
+            "“That proves you are unusual, and I am convinced that the only people worthy of consideration in this world are the unusual ones. For the common folks are like the leaves of a tree, and live and die unnoticed.”",
+          person: " L. Frank Baum, The Land of Oz",
+        },
+        {
+          quote:
+            "“But that was life: Nobody got a guided tour to their own theme park. You had to hop on the rides as they presented themselves, never knowing whether you would like the one you were in line for...or if the bastard was going to make you throw up your corn dog and your cotton candy all over the place.”",
+          person: "J.R. Ward, Crave",
+        },
+        {
+          quote: "“Her name badge read: Hello! My name is DIE, DEMIGOD SCUM!”",
+          person: "Rick Riordan, The Son of Neptune",
+        },
+        {
+          quote: "“Insane means fewer cameras!”",
+          person: "Ally Carter, Only the Good Spy Young",
+        },
+        {
+          quote: "“Act first, explain later.”",
+          person: "Dan Brown, Digital Fortress",
+        },
+        {
+          quote: "“Hand me my pants,”",
+          person: "Michael Grant, Hunger",
+        },
+        {
+          quote:
+            "“It looks rather ordinary said the Snork. Unless you consider that a top hat is always somewhat extraordinary, of course.”",
+          person: "Tove Jansson, Finn Family Moomintroll",
+        },
+        {
+          quote: " “My melon soul Crushed by your Gallagher of apathy”",
+          person: "David Wong, John Dies at the End",
+        },
+      ];
+      let quote = document.querySelector(".quote");
+      let person = document.querySelector(".person");
+      let button = document
+        .querySelector(".btn")
+        .addEventListener("click", function () {
+          let random = Math.floor(Math.random() * quotes.length);
+          quote.innerText = quotes[random].quote;
+          person.innerText = quotes[random].person;
+        });
+    </script>
+  </body>
+</html>
